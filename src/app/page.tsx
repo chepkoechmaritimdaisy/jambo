@@ -1,5 +1,11 @@
+// src/app/page.tsx
+
 import Image from "next/image";
 import Link from "next/link";
+import { HowItWorks } from "@/components/how-it-works";
+import { RealResults } from "@/components/real-results";
+import { Packages } from "@/components/packages";
+import { Ambassador } from "@/components/ambassador";
 
 export default function HomePage() {
   return (
@@ -32,41 +38,10 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* "How It Works" Section */}
-      <section className="bg-background-dark py-16">
-        <div className="mx-auto max-w-6xl px-8">
-          <h2 className="text-center text-3xl font-bold leading-tight tracking-tight text-white mb-8">How It Works</h2>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="flex flex-col items-center gap-4 rounded-xl border border-border-dark bg-container-dark p-6 text-center">
-              <div className="rounded-full bg-primary/20 p-3 text-primary">
-                <span className="material-symbols-outlined text-3xl">medical_services</span>
-              </div>
-              <h3 className="text-lg font-bold leading-tight text-white">1. Consultation</h3>
-              <p className="text-sm font-normal leading-normal text-text-muted-dark">
-                We assess your tattoo and skin to create a personalized, safe removal plan.
-              </p>
-            </div>
-            <div className="flex flex-col items-center gap-4 rounded-xl border border-border-dark bg-container-dark p-6 text-center">
-              <div className="rounded-full bg-primary/20 p-3 text-primary">
-                <span className="material-symbols-outlined text-3xl">bolt</span>
-              </div>
-              <h3 className="text-lg font-bold leading-tight text-white">2. Treatment</h3>
-              <p className="text-sm font-normal leading-normal text-text-muted-dark">
-                Our advanced Picosecond laser technology safely breaks down the tattoo ink.
-              </p>
-            </div>
-            <div className="flex flex-col items-center gap-4 rounded-xl border border-border-dark bg-container-dark p-6 text-center">
-              <div className="rounded-full bg-primary/20 p-3 text-primary">
-                <span className="material-symbols-outlined text-3xl">healing</span>
-              </div>
-              <h3 className="text-lg font-bold leading-tight text-white">3. Aftercare</h3>
-              <p className="text-sm font-normal leading-normal text-text-muted-dark">
-                We provide comprehensive aftercare to ensure your skin heals perfectly.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HowItWorks />
+      <RealResults />
+      <Packages />
+      <Ambassador />
     </>
   );
 }
