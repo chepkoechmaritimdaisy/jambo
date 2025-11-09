@@ -1,8 +1,8 @@
 import NextAuth from "next-auth"
-import { NextAuthConfig } from "next-auth"
+import { NextAuthOptions } from "next-auth"
 
 // Your full auth configuration belongs here
-const authOptions: NextAuthConfig = {
+const authOptions: NextAuthOptions = {
   // Configure one or more authentication providers
   providers: [
     // Add providers here, e.g., Google, Email
