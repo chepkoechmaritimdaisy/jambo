@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import { Footer } from "@/components/footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
@@ -18,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${manrope.className} bg-background-dark font-display text-text-light`}>
+      <body className={`${manrope.className} bg-background-light font-display text-text-primary`}>
         <div className="relative flex min-h-screen w-full flex-col">
-          <Navbar />
+          <Header />
           <main className="flex-1">
             {children}
           </main>

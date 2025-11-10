@@ -9,8 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "primary": "#00A99D", // Deep Teal from Screen 15
-        "background-dark": "#121212", // Dark charcoal from Screen 15
+        "primary": "#4FD1C5",
+        "background-light": "#FFFFFF",
+        "background-dark": "#1A2E35",
+        "text-primary": "#1A2E35",
+        "text-secondary": "#718096",
+        "accent-light": "#E6FFFA",
         "container-dark": "#242424", // Lighter grey for cards from Screen 15
         "text-light": "#EAEAEA",
         "text-muted-dark": "#A0A0A0",
