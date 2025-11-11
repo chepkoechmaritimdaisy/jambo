@@ -9,7 +9,7 @@ export async function createPackagesTable() {
       description TEXT,
       price INT NOT NULL,
       sessions INT NOT NULL,
-      photos TEXT[],
+      photos TEXT,
       status VARCHAR(50) NOT NULL
     );
   `;

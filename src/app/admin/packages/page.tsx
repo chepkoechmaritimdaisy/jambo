@@ -1,5 +1,6 @@
 import { getPackages } from '@/lib/db';
 import Link from 'next/link';
+import { deletePackage } from '@/app/actions/packages';
 
 export const dynamic = 'force-dynamic';
 
@@ -40,12 +41,14 @@ export default async function PackagesPage() {
                 </td>
                 <td className="h-[72px] px-4 py-2 text-right">
                   <div className="flex items-center justify-end gap-2">
-                    <button className="flex size-8 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-800">
+                    <Link href={`/admin/packages/edit/${pkg.id}`} className="flex size-8 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-800">
                       <span className="material-symbols-outlined text-xl">edit</span>
-                    </button>
-                    <button className="flex size-8 items-center justify-center rounded-lg text-red-400 hover:bg-red-900/50">
-                      <span className="material-symbols-outlined text-xl">delete</span>
-                    </button>
+                    </Link>
+                    <form action={deletePackage.bind(null, pkg.id)}>
+                      <button className="flex size-8 items-center justify-center rounded-lg text-red-400 hover:bg-red-900/50">
+                        <span className="material-symbols-outlined text-xl">delete</span>
+                      </button>
+                    </form>
                   </div>
                 </td>
               </tr>
