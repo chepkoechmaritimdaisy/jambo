@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>InklessIsMore.ke - Ambassador Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#00A99D", /* Deep Teal as requested */
+              "background-light": "#f6f7f8",
+              "background-dark": "#121212", /* Dark charcoal as requested */
+              "container-dark": "#242424", /* Lighter grey for cards */
+              "text-light": "#EAEAEA",
+              "text-muted-dark": "#A0A0A0",
+              "border-dark": "#3b4b54",
+              "success": "#0bda57",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+     .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        font-size: 24px;
+     }
+     .material-symbols-outlined.fill {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+     }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex flex-col w-64 bg-background-light dark:bg-container-dark p-4 border-r border-transparent dark:border-border-dark">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 p-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Ambassador profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6EXge6aBKibpH79UTMcrOgJg-Wug-5gAa3s3uvlP50fgBZ9JCqBM1f42yl7ERkbGYE4Eoo7RTpTmRlmUFRNCYcnyh8eqqc-UVZogpinxHV9veiif6YECl18CggFy8GsPg68KpDlHKGjVFbFyfdo0zlU_0FrcbsIxP6inMYS1NWm05hOJueEleY1h4Uc94lxLyEPk3i9alzd9qBaqWljJ9EozSRBkHQSWORUBOCi_cFewFyekNdUA5MATBepsykzISmCbHBlgMO4k");'></div>
+<div class="flex flex-col">
+<h1 class="text-gray-800 dark:text-text-light text-base font-medium leading-normal">James Kariuki</h1>
+<p class="text-gray-500 dark:text-text-muted-dark text-sm font-normal leading-normal">Ambassador</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 dark:bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined fill">dashboard</span>
+<p class="text-sm font-bold leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-text-light" href="#">
+<span class="material-symbols-outlined">sell</span>
+<p class="text-sm font-medium leading-normal">My Coupons</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-text-light" href="#">
+<span class="material-symbols-outlined">payments</span>
+<p class="text-sm font-medium leading-normal">Earnings &amp; Payouts</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-text-light" href="#">
+<span class="material-symbols-outlined">model_training</span>
+<p class="text-sm font-medium leading-normal">Training</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-text-light" href="#">
+<span class="material-symbols-outlined">download_for_offline</span>
+<p class="text-sm font-medium leading-normal">Marketing Materials</p>
+</a>
+</nav>
+</div>
+<div class="mt-auto flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-text-light" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-text-light" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium leading-normal">Logout</p>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-7xl mx-auto">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-4 items-center mb-8">
+<div class="flex flex-col gap-2">
+<p class="text-gray-900 dark:text-text-light text-4xl font-black leading-tight tracking-[-0.033em]">Welcome back, James!</p>
+<p class="text-gray-600 dark:text-text-muted-dark text-base font-normal leading-normal">Here's a summary of your activity and earnings.</p>
+</div>
+<button class="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary text-white text-sm font-bold leading-normal tracking-wide shadow-lg hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+                        Create New Coupon
+                    </button>
+</div>
+<!-- Stats -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-background-light dark:bg-container-dark border border-gray-200 dark:border-border-dark">
+<p class="text-gray-800 dark:text-text-light text-base font-medium leading-normal">Total Earnings</p>
+<p class="text-gray-900 dark:text-white tracking-light text-3xl font-bold leading-tight">KES 125,000</p>
+<p class="text-success text-base font-medium leading-normal">+5.2%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-background-light dark:bg-container-dark border border-gray-200 dark:border-border-dark">
+<p class="text-gray-800 dark:text-text-light text-base font-medium leading-normal">Coupon Uses (Month)</p>
+<p class="text-gray-900 dark:text-white tracking-light text-3xl font-bold leading-tight">15</p>
+<p class="text-success text-base font-medium leading-normal">+10%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-background-light dark:bg-container-dark border border-gray-200 dark:border-border-dark">
+<p class="text-gray-800 dark:text-text-light text-base font-medium leading-normal">Pending Payout</p>
+<p class="text-gray-900 dark:text-white tracking-light text-3xl font-bold leading-tight">KES 27,500</p>
+<p class="text-gray-500 dark:text-text-muted-dark text-base font-medium leading-normal">Next: Oct 31</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-background-light dark:bg-container-dark border border-gray-200 dark:border-border-dark">
+<p class="text-gray-800 dark:text-text-light text-base font-medium leading-normal">Next Training</p>
+<p class="text-gray-900 dark:text-white tracking-light text-3xl font-bold leading-tight">Oct 25, 2024</p>
+<p class="text-gray-500 dark:text-text-muted-dark text-base font-medium leading-normal">Advanced Techniques</p>
+</div>
+</div>
+<!-- Section: My Coupons -->
+<div class="bg-background-light dark:bg-container-dark rounded-xl border border-gray-200 dark:border-border-dark">
+<!-- SectionHeader -->
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-6 pb-3 pt-5">My Coupons</h2>
+<!-- Tabs -->
+<div class="pb-3 border-b border-gray-200 dark:border-border-dark">
+<div class="flex px-6 gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary pb-[13px] pt-4" href="#">
+<p class="text-primary text-sm font-bold leading-normal tracking-[0.015em]">Active Coupons</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-500 dark:text-text-muted-dark pb-[13px] pt-4 hover:text-primary" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Expired Coupons</p>
+</a>
+</div>
+</div>
+<!-- Coupon List / Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="border-b border-gray-200 dark:border-border-dark">
+<th class="p-4 pl-6 text-xs font-semibold uppercase text-gray-500 dark:text-text-muted-dark">Coupon Code</th>
+<th class="p-4 text-xs font-semibold uppercase text-gray-500 dark:text-text-muted-dark">Discount</th>
+<th class="p-4 text-xs font-semibold uppercase text-gray-500 dark:text-text-muted-dark">Uses</th>
+<th class="p-4 text-xs font-semibold uppercase text-gray-500 dark:text-text-muted-dark">Status</th>
+<th class="p-4 pr-6 text-xs font-semibold uppercase text-gray-500 dark:text-text-muted-dark"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200 dark:divide-border-dark">
+<tr>
+<td class="p-4 pl-6 font-mono text-sm text-gray-800 dark:text-text-light">INKLESS20</td>
+<td class="p-4 text-sm text-gray-600 dark:text-text-muted-dark">20% Off</td>
+<td class="p-4 text-sm text-gray-600 dark:text-text-muted-dark">42</td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-full bg-success/20 px-3 py-1 text-xs font-medium text-success">Active</span>
+</td>
+<td class="p-4 pr-6 text-right">
+<button class="text-primary hover:underline text-sm font-medium">View Details</button>
+</td>
+</tr>
+<tr>
+<td class="p-4 pl-6 font-mono text-sm text-gray-800 dark:text-text-light">FRESHSTART15</td>
+<td class="p-4 text-sm text-gray-600 dark:text-text-muted-dark">15% Off</td>
+<td class="p-4 text-sm text-gray-600 dark:text-text-muted-dark">11</td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-full bg-success/20 px-3 py-1 text-xs font-medium text-success">Active</span>
+</td>
+<td class="p-4 pr-6 text-right">
+<button class="text-primary hover:underline text-sm font-medium">View Details</button>
+</td>
+</tr>
+<tr>
+<td class="p-4 pl-6 font-mono text-sm text-gray-800 dark:text-text-light">JAMESVIP</td>
+<td class="p-4 text-sm text-gray-600 dark:text-text-muted-dark">KES 5,000 Off</td>
+<td class="p-4 text-sm text-gray-600 dark:text-text-muted-dark">2</td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-full bg-success/20 px-3 py-1 text-xs font-medium text-success">Active</span>
+</td>
+<td class="p-4 pr-6 text-right">
+<button class="text-primary hover:underline text-sm font-medium">View Details</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

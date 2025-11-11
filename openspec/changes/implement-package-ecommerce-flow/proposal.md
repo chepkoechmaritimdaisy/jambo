@@ -1,0 +1,1 @@
+This change covers the user-facing e-commerce experience. It includes creating the UI for listing all tattoo removal packages, viewing detailed information for a specific package, and a modern checkout flow. This phase focuses solely on the frontend components, with data being mocked as necessary.

@@ -1,0 +1,13 @@
+-   **Admin Panel Layout**:
+    -   [ ] Create a dedicated layout for the admin section (`/admin`).
+    -   [ ] Implement a sidebar for navigation and a header, based on `admin_panel_-_dashboard_1` design.
+    -   [ ] This layout should be protected and only accessible to authenticated admin users (UI-only, no auth logic yet).
+-   **Package Management UI (CRUD)**:
+    -   [ ] **List Packages**: Design a table or list view on `/admin/packages` to display all existing packages.
+    -   [ ] **Create Package**: Develop a form (`/admin/packages/new`) for adding a new package, including fields for name, description, price, and image uploads.
+    -   [ ] **Edit Package**: Develop a form (`/admin/packages/[id]/edit`) to modify an existing package.
+    -   [ ] **Delete Package**: Implement a confirmation modal or button to delete a package from the list.
+-   **Routing**:
+    -   [ ] Set up the nested routes under `/admin` for package management.
+-   **Code Quality**:
+    -   [ ] Run linter and fix any issues.

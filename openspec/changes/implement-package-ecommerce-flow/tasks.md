@@ -1,0 +1,19 @@
+-   **Package Listing Page UI**:
+    -   [ ] Create the main layout for the `/packages` page based on `tattoo_removal_packages_*` designs.
+    -   [ ] Develop a reusable `PackageCard` component to display a summary of each package (image, name, price).
+    -   [ ] Populate the page with mocked package data.
+    -   [ ] Ensure the layout is responsive.
+-   **Package Details Page UI**:
+    -   [ ] Create the dynamic route `/[package-slug]` for package details, based on `package_details_page_*` designs.
+    -   [ ] Design the page layout to include a photo gallery, detailed description, price, and a "Buy Now" button.
+    -   [ ] Use mocked data for a single package to build the component.
+    -   [ ] Ensure the page is responsive.
+-   **Checkout Flow UI**:
+    -   [ ] Design the UI for the checkout process based on `modern_checkout_flow_*` designs.
+    -   [ ] Create components for the checkout form, order summary, and payment section.
+    -   [ ] This is a UI-only implementation; no payment integration will be done in this task.
+-   **Routing**:
+    -   [ ] Add routes for `/packages` and `/packages/[slug]`.
+    -   [ ] Link the `PackageCard` components to their respective detail pages.
+-   **Code Quality**:
+    -   [ ] Run linter and fix any issues.

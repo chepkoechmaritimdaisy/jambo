@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>InklessIsMore.ke - Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13a4ec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+              "text-light": "#111618",
+              "text-dark": "#f6f7f8",
+              "text-muted-light": "#617c89",
+              "text-muted-dark": "#a0aec0",
+              "border-light": "#dbe2e6",
+              "border-dark": "#2d3748",
+              "card-light": "#ffffff",
+              "card-dark": "#1a2a33",
+              "success": "#078836"
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem",
+              "lg": "0.75rem",
+              "xl": "1rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full">
+<aside class="flex h-screen w-64 flex-col bg-card-light dark:bg-card-dark p-4 border-r border-border-light dark:border-border-dark sticky top-0">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 px-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Clinic Logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuByJUXqTENVLb4m2fKeGUbKUV14nosxC361lnzWUYRnpQoemqZYLN2B43Pdj8qFq9se4DSyiH9ZtRqL8_0iAlMYl90bZuKPDKIzAHAwH5YO1cotltWwRwHm8MGQn6Q5h6_oDysV1tIyl9znR5-hK7cJYo4ndGBvjAQZaovGmOx3cD9ngZnEJJ7YbecGPeS_nD2f7b3R9av5RA65IzQ7fAhTu8yZmCNMEpvYtL405QiNGaWzFIk5B7ctWZWhS5mzzxsaUaOwweusEw8");'></div>
+<div class="flex flex-col">
+<h1 class="text-text-light dark:text-text-dark text-base font-bold leading-normal">InklessIsMore.ke</h1>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal">Dashboard</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined fill text-primary">space_dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+</nav>
+</div>
+<div class="mt-auto">
+<div class="flex flex-col p-3 rounded-lg bg-background-dark border border-border-dark mb-4">
+<div class="flex items-center gap-3">
+<img alt="Admin Avatar" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAReRawPEs740991fxL-wVWVMA4G6SmWqcqsUXNsqBZdn0ba-uL7VhKDfF0pYqwBSFiYp_aqzQKBMpQorBmFkSjMUCl_wo-gOOLEZ6KHOvfheljaK_gTRvXYNYuWK0xQG2immZiQR31DiyVw8rnCe7B_d4Cph1Uvw6mTOzX4tUE_X4qFpYUebb-q4Qm61_7k_nzgLN1nRdin_xslgbcAFG3un7VmLa4By78G9054RikXgOFVbevTwwAsC96jaOlW5TKua7aosA2KCc"/>
+<div>
+<p class="text-sm font-semibold text-text-dark">Admin Name</p>
+<p class="text-xs text-text-muted-dark">Webpage Admin</p>
+</div>
+</div>
+<a class="flex items-center gap-3 px-3 py-2.5 mt-4 rounded-lg hover:bg-red-500/10 text-red-500 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-red-500">logout</span>
+<p class="text-sm font-medium leading-normal">Log Out</p>
+</a>
+</div>
+</div>
+</aside>
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="w-full max-w-7xl mx-auto">
+<div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+<div class="flex flex-col gap-2">
+<h1 class="text-text-light dark:text-text-dark text-4xl font-black leading-tight tracking-[-0.033em]">Welcome, Admin Name</h1>
+<p class="text-text-muted-light dark:text-text-muted-dark text-base font-normal leading-normal">Select a portal to manage your clinic's activities.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+<a class="group flex flex-col justify-between rounded-xl p-6 bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark hover:border-primary hover:shadow-lg transition-all duration-300" href="#">
+<div>
+<div class="p-3 bg-primary/20 rounded-lg inline-flex mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">admin_panel_settings</span>
+</div>
+<h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-1">Webpage Admin</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Manage bookings, packages, ambassadors, and overall website settings.</p>
+</div>
+<div class="flex items-center justify-end mt-6 text-primary">
+<span class="text-sm font-medium">Enter Portal</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+</div>
+</a>
+<a class="group flex flex-col justify-between rounded-xl p-6 bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark hover:border-primary hover:shadow-lg transition-all duration-300" href="#">
+<div>
+<div class="p-3 bg-primary/20 rounded-lg inline-flex mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">campaign</span>
+</div>
+<h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-1">Ambassador Portal</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Track your referrals, commissions, and access promotional materials.</p>
+</div>
+<div class="flex items-center justify-end mt-6 text-primary">
+<span class="text-sm font-medium">Enter Portal</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+</div>
+</a>
+<a class="group flex flex-col justify-between rounded-xl p-6 bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark hover:border-primary hover:shadow-lg transition-all duration-300" href="#">
+<div>
+<div class="p-3 bg-primary/20 rounded-lg inline-flex mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">health_and_safety</span>
+</div>
+<h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-1">Technician Portal</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">View your schedule, manage appointments, and update client notes.</p>
+</div>
+<div class="flex items-center justify-end mt-6 text-primary">
+<span class="text-sm font-medium">Enter Portal</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+</div>
+</a>
+<a class="group flex flex-col justify-between rounded-xl p-6 bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark hover:border-primary hover:shadow-lg transition-all duration-300" href="#">
+<div>
+<div class="p-3 bg-primary/20 rounded-lg inline-flex mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">person</span>
+</div>
+<h3 class="text-lg font-bold text-text-light dark:text-text-dark mb-1">Customer Portal</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Manage your bookings, view your treatment history, and update your profile.</p>
+</div>
+<div class="flex items-center justify-end mt-6 text-primary">
+<span class="text-sm font-medium">Enter Portal</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
+</main>
+</div>
+</body></html>

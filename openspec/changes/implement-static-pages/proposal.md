@@ -1,0 +1,1 @@
+This change introduces the foundational static pages for the website as outlined in Phase 1, including the Homepage and the FAQ (Q&A) page. The implementation will be based on the provided designs and will focus on creating a modern, responsive user interface without backend logic for this initial phase.

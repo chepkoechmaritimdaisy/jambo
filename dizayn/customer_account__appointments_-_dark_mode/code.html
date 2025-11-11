@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Customer Account - InklessIsMore.ke</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13a4ec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<div class="flex h-full min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col border-r border-white/10 bg-[#12181c] p-4">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 p-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwNBmcRKlEby9zXY_x9TG4OMyv9qWQc-AaSvyLQNVBTKsHb481YkW8PuRRxnls_sh7DnBtu2vpUhNBcnwBB8LKDhi6Qj7pEOjZ-MJnqo_gk7aHkzYldkKTEN7c-paRa9-QErorFrPE0Coy9VWF0P1GCg5GPg1bTgSO3NbdfAsBAMlZHtC4aw6MwLSnUyuxxRTaQ9EZNKFxayuQw3e04QLwuHnC6JAaDk6ejggHyvNwmHjo5afUJmCg80PhEACZJYTLMh8L1aFPVPc");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">James Kariuki</h1>
+<p class="text-[#9db0b9] text-sm font-normal leading-normal">james.k@example.com</p>
+</div>
+</div>
+<nav class="mt-4 flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded-lg bg-primary/20 px-3 py-2" href="#">
+<span class="material-symbols-outlined fill text-primary">dashboard</span>
+<p class="text-primary text-sm font-bold leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-white/70 hover:bg-white/5 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<p class="text-sm font-medium leading-normal">My Packages</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-white/70 hover:bg-white/5 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<p class="text-sm font-medium leading-normal">Appointments</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-white/70 hover:bg-white/5 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-sm font-medium leading-normal">Profile</p>
+</a>
+</nav>
+</div>
+<div class="mt-auto flex flex-col gap-1">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-white/70 hover:bg-white/5 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium leading-normal">Logout</p>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto p-6 lg:p-10">
+<div class="mx-auto max-w-4xl">
+<!-- PageHeading -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-col gap-2">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Welcome back, James!</h1>
+<p class="text-[#9db0b9] text-base font-normal leading-normal">Here's a summary of your account and upcoming appointments.</p>
+</div>
+</div>
+<!-- Upcoming Appointment Card -->
+<div class="mt-8">
+<div class="rounded-xl border border-white/10 bg-[#12181c] p-6 @container">
+<div class="flex flex-col items-start justify-between gap-4 @lg:flex-row @lg:items-center">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20">
+<span class="material-symbols-outlined text-primary">calendar_month</span>
+</div>
+<div>
+<p class="text-sm font-medium text-[#9db0b9]">Next Appointment</p>
+<p class="text-lg font-bold text-white">Tuesday, August 27, 2024 at 2:00 PM</p>
+</div>
+</div>
+<div class="flex w-full shrink-0 gap-3 @lg:w-auto">
+<button class="flex h-10 flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-white/10 px-4 text-sm font-medium leading-normal text-white transition-colors hover:bg-white/20">
+<span class="truncate">Reschedule</span>
+</button>
+<button class="flex h-10 flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-transparent px-4 text-sm font-medium leading-normal text-white/60 ring-1 ring-inset ring-white/20 transition-colors hover:bg-white/5 hover:text-white">
+<span class="truncate">Cancel</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SectionHeader for My Packages -->
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-10">Active Packages</h2>
+<!-- Card for Full Sleeve Removal -->
+<div class="rounded-xl border border-white/10 bg-[#12181c] @container">
+<div class="flex flex-col items-stretch justify-start @xl:flex-row @xl:items-start">
+<div class="w-full shrink-0 bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl @xl:w-64 @xl:aspect-square @xl:rounded-l-xl @xl:rounded-tr-none" data-alt="Abstract image of laser lines on skin" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAIM3YLex1K37k8bOiNTFYE6EIRuSbtF3RPTXOKVSdm-F_L2HFtb29BI3SO8BEczlYu31_qIx0HvwdcSxxCN-AjbRLuPOv9UX_BrzzoknZKRyrjHwuuAiO6_Zq9fdBmXnEWzT3_C_RrRUcHJ6QvoM2ZZ2PB0aSUUQ_vVSIr-6EpkJ1xZFhTmHYmXrbnUAxlv8GY-RYlFasSS1svuMabgIcNuG5L_k2iwuAXp2fIvI1y8j_MLTIFp-nhN-sn56kz8ry7PQutzMObONY");'></div>
+<div class="flex w-full grow flex-col justify-between gap-4 p-6">
+<div class="flex flex-col gap-1">
+<p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Full Sleeve Removal Package</p>
+<p class="text-[#9db0b9] text-base font-normal leading-normal">Purchased on: 15 July 2024</p>
+</div>
+<!-- ProgressBar -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between gap-6">
+<p class="text-white text-base font-medium leading-normal">Sessions Completed</p>
+<p class="text-[#9db0b9] text-sm font-normal leading-normal">3/10</p>
+</div>
+<div class="h-2 w-full rounded-full bg-white/10"><div class="h-2 rounded-full bg-primary" style="width: 30%;"></div></div>
+</div>
+<div class="flex w-full items-end justify-between gap-3">
+<p class="text-[#9db0b9] text-sm font-normal leading-normal">This package includes 10 laser removal sessions.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-medium leading-normal transition-opacity hover:opacity-90">
+<span class="truncate">Schedule Next Session</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card for Small Tattoo Removal (Empty State example) -->
+<div class="mt-6 rounded-xl border border-white/10 bg-[#12181c] @container">
+<div class="flex flex-col items-stretch justify-start @xl:flex-row @xl:items-start">
+<div class="w-full shrink-0 bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl @xl:w-64 @xl:aspect-square @xl:rounded-l-xl @xl:rounded-tr-none" data-alt="Abstract gradient image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoMJac0IgMd63qlRjipeGb5mWnlsJ-ocGL3ZUEDetWfTj7F-6kYMfRn4wn5qCB-WbPipihNkkAzUUrGN9Sk-PkMM47z9o2x-zfHGg_l88d9L_uHndIN46agdVIQNOlDoU1AZ7asTk8Xd7HxAzwwthR7TrxOhrEFr7_9-HUL1fZl9FX1Ph98zv48B-PpKyP0E_BWCJ-1s5IIXYrfdcP_IE5FAKbsTbDJ_OGo0V6eQvK1ImYk8XTtPiQ2-OXfK3-wAqdbElDQuZxoso");'></div>
+<div class="flex w-full grow flex-col justify-between gap-4 p-6">
+<div class="flex flex-col gap-1">
+<p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Small Tattoo Removal</p>
+<p class="text-[#9db0b9] text-base font-normal leading-normal">Purchased on: 28 May 2024</p>
+</div>
+<!-- ProgressBar -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between gap-6">
+<p class="text-white text-base font-medium leading-normal">Sessions Completed</p>
+<p class="text-[#9db0b9] text-sm font-normal leading-normal">5/5</p>
+</div>
+<div class="h-2 w-full rounded-full bg-white/10"><div class="h-2 rounded-full bg-primary" style="width: 100%;"></div></div>
+</div>
+<div class="flex w-full items-center justify-between gap-3">
+<p class="text-green-400 text-sm font-medium leading-normal">Package completed!</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-not-allowed items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/10 text-white/50 text-sm font-medium leading-normal">
+<span class="truncate">Schedule Session</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

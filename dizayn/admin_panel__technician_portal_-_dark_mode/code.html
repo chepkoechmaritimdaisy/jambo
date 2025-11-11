@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Technician Schedule &amp; Clients - InklessIsMore.ke</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="flex flex-col w-64 bg-[#111618] border-r border-gray-800 p-4 shrink-0">
+<div class="flex items-center gap-3 mb-8">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Profile picture of Dr. Alex Riley" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZi8dnjnlLojO9fcW1NkU9XYD9Q6DluMdtJjVLmqo3p7lmFCemBuo1QzKcjnWkExnb6AEutwwenQkWznnjacYp0L2Xt41n4GKey2l-8siAjlPQ6HhtgSjZHgBBAUQiIJ0vmJkmFwaSrdQUxr8tooDSUYUxqZJsJeA6BYHnyT5Xe23FJ3qksDNM-Z0EEOTdZma2LgHlT8x1wlXbjhcjGZbcjERrONxBBn9ItrwdCTdbKWAWbDCDS9d5OrxyVp8NFDKMj5d2kUfhhaQ");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">Dr. Alex Riley</h1>
+<p class="text-[#9db0b9] text-sm font-normal leading-normal">Technician</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 text-white hover:bg-[#283339] rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-[#283339] text-white" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+<p class="text-sm font-medium leading-normal">Schedule &amp; Clients</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white hover:bg-[#283339] rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">book_online</span>
+<p class="text-sm font-medium leading-normal">Bookings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white hover:bg-[#283339] rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<p class="text-sm font-medium leading-normal">Ambassadors</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white hover:bg-[#283339] rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<p class="text-sm font-medium leading-normal">Reports</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-white hover:bg-[#283339] rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-4">
+<a class="flex items-center gap-3 px-3 py-2 text-[#9db0b9] hover:text-white rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium leading-normal">Logout</p>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-6 lg:p-8">
+<div class="max-w-7xl mx-auto">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 mb-6 items-center">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">My Schedule &amp; Clients</p>
+<!-- ButtonGroup -->
+<div class="flex gap-3 flex-wrap">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#283339] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-80 transition-colors">
+<span class="truncate">Set Recurring Availability</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors">
+<span class="truncate">Save Changes</span>
+</button>
+</div>
+</div>
+<!-- Main Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Left Column: Calendar -->
+<div class="lg:col-span-2 flex flex-col gap-6">
+<div class="bg-[#111618] p-4 rounded-xl border border-gray-800">
+<!-- CalendarPicker -->
+<div class="flex min-w-72 flex-1 flex-col gap-0.5">
+<div class="flex items-center p-1 justify-between">
+<button class="text-white flex size-10 items-center justify-center hover:bg-[#283339] rounded-full transition-colors">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<p class="text-white text-base font-bold leading-tight flex-1 text-center">October 2024</p>
+<button class="text-white flex size-10 items-center justify-center hover:bg-[#283339] rounded-full transition-colors">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7">
+<p class="text-white text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">S</p>
+<p class="text-white text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">M</p>
+<p class="text-white text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">T</p>
+<p class="text-white text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">W</p>
+<p class="text-white text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">T</p>
+<p class="text-white text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">F</p>
+<p class="text-white text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">S</p>
+<button class="h-12 w-full text-gray-500 col-start-1 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">29</div></button>
+<button class="h-12 w-full text-gray-500 text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full">30</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">1</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">2</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">3</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">4</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">5</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">6</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">7</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">8</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">9</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">10</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">11</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">12</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">13</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">14</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">15</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full bg-primary relative">16<span class="absolute top-1.5 right-1.5 h-1.5 w-1.5 rounded-full bg-green-400"></span></div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339] relative">17<span class="absolute top-1.5 right-1.5 h-1.5 w-1.5 rounded-full bg-green-400"></span></div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">18</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">19</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">20</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">21</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">22</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">23</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">24</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">25</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">26</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">27</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">28</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">29</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">30</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal"><div class="flex size-full items-center justify-center rounded-full hover:bg-[#283339]">31</div></button>
+</div>
+</div>
+</div>
+<!-- Time Slots -->
+<div class="bg-[#111618] p-4 rounded-xl border border-gray-800">
+<h3 class="text-white text-lg font-bold mb-4">Wednesday, October 16</h3>
+<div class="space-y-4">
+<!-- Example Time Slot with Appointment -->
+<div class="flex items-center gap-4">
+<span class="w-20 text-right text-sm text-gray-400">9:00 AM</span>
+<div class="flex-1 bg-primary/20 border-l-4 border-primary p-3 rounded-lg">
+<p class="font-bold text-white">Jameson Kamau</p>
+<p class="text-sm text-gray-300">Package Session 3/6</p>
+</div>
+</div>
+<!-- Example Available Time Slot -->
+<div class="flex items-center gap-4">
+<span class="w-20 text-right text-sm text-gray-400">10:00 AM</span>
+<button class="flex-1 text-left bg-[#283339] hover:bg-green-500/20 border-l-4 border-gray-600 hover:border-green-500 p-3 rounded-lg transition-colors group">
+<p class="text-green-400 font-medium text-sm">Mark as Available</p>
+</button>
+</div>
+<!-- Example Blocked Time Slot -->
+<div class="flex items-center gap-4">
+<span class="w-20 text-right text-sm text-gray-400">11:00 AM</span>
+<button class="flex-1 text-left bg-red-500/10 hover:bg-red-500/20 border-l-4 border-red-500 p-3 rounded-lg transition-colors group">
+<p class="text-red-400 font-medium text-sm">Mark as Unavailable</p>
+</button>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-20 text-right text-sm text-gray-400">12:00 PM</span>
+<div class="flex-1 bg-[#283339] p-3 rounded-lg">
+<p class="text-gray-400 font-medium text-sm text-center">Lunch Break</p>
+</div>
+</div>
+<!-- More time slots... -->
+<div class="flex items-center gap-4">
+<span class="w-20 text-right text-sm text-gray-400">1:00 PM</span>
+<button class="flex-1 text-left bg-[#283339] hover:bg-green-500/20 border-l-4 border-gray-600 hover:border-green-500 p-3 rounded-lg transition-colors group">
+<p class="text-green-400 font-medium text-sm">Mark as Available</p>
+</button>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-20 text-right text-sm text-gray-400">2:00 PM</span>
+<div class="flex-1 bg-primary/20 border-l-4 border-primary p-3 rounded-lg">
+<p class="font-bold text-white">Amina Yusuf</p>
+<p class="text-sm text-gray-300">Consultation</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: My Clients -->
+<div class="lg:col-span-1 bg-[#111618] p-4 rounded-xl border border-gray-800 self-start">
+<!-- SectionHeader -->
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-2 pb-3 pt-1">My Clients</h2>
+<!-- Search Bar -->
+<div class="relative mb-4 px-2">
+<span class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+<input class="w-full bg-[#283339] border-none text-white rounded-lg pl-10 pr-4 py-2 focus:ring-2 focus:ring-primary transition-shadow" placeholder="Search clients..." type="text"/>
+</div>
+<!-- Client List -->
+<div class="flex flex-col gap-3">
+<!-- Client Card -->
+<a class="flex items-center gap-4 p-3 rounded-lg hover:bg-[#283339] transition-colors" href="#">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Profile picture of Jameson Kamau" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA2dVNed38j9LgmSE_PMLRExqCKFf_9ciHD4SObp6p1mOR9Dcz6P0G59oA4zok6nVCZOdnIvIEoMHr9Utn8JK3D3m7wZtjl95jdwk7hEeytsWzI1BbTfaKe18aF4QsiQWQV-c8VGfH-gjFHkZLwPeQu8o_oS6PfOCpIFwo_cBxpVG_LHLXoGnbGOvLsSa6S13IQjCd1fPP0Rddn_-UrswGjYg2Xaq8H8T9mIcxrYeUuQeffRhRMcZ1IaSdV0TKvwylwCGEkLn_VOyk");'></div>
+<div class="flex flex-col">
+<p class="text-white font-semibold">Jameson Kamau</p>
+<p class="text-sm text-gray-400">Next: Oct 16 at 9:00 AM</p>
+</div>
+</a>
+<!-- Client Card -->
+<a class="flex items-center gap-4 p-3 rounded-lg hover:bg-[#283339] transition-colors" href="#">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Profile picture of Amina Yusuf" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCUkAyZZFWiCsbjLe5VpnuvvbMlyY-NdE0MILr0iFKWFGe2D0B5p6E2dgjvm_XYChY5r0rat0OAK6E7esSFr420MUdPxnNSgC6A-nZMbqaY-Go6kYhOnWN6lIZZN2GoRfFS9_AK5mHDf0tjMVT1ngtpbIk8HLmQZaH2cn5_WtQCHihKTC8qYSyj1517U08TbiwcfzCvAp8AU-NPkR_7Q35l8noSKChzWELSDPwLbxKntklh4JsByvW0q4IYsYfIwVRLxhHaJktzeh4");'></div>
+<div class="flex flex-col">
+<p class="text-white font-semibold">Amina Yusuf</p>
+<p class="text-sm text-gray-400">Next: Oct 16 at 2:00 PM</p>
+</div>
+</a>
+<!-- Client Card -->
+<a class="flex items-center gap-4 p-3 rounded-lg hover:bg-[#283339] transition-colors" href="#">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Profile picture of Brian Omondi" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAhfGw5IJtYg9bqy9oMGis_lLh9bUpeR3PIJ9tQQQ3CmH1dSDCBOrH-rRTphiwaxUxtFx_pmJAm9sxoss617Cp3j_ZTo4tBGbjTIW1atYBYJsa064VWrU9yZTIfrj8vCPUXlFE3HA2RP_k4_vk2fMMbNzp6uieDcXeNLOmZl2uSSoZBBdLRyje3IP4yU1UKMPPgaJUi5jop4jCucq6VMpKUxepJDoLQ-zVXtthRVs1HSrWiT2RcgQrWHKibu6tMTzkTtTsHNqtCqdk");'></div>
+<div class="flex flex-col">
+<p class="text-white font-semibold">Brian Omondi</p>
+<p class="text-sm text-gray-400">Next: Oct 17 at 11:00 AM</p>
+</div>
+</a>
+<!-- Client Card -->
+<a class="flex items-center gap-4 p-3 rounded-lg hover:bg-[#283339] transition-colors" href="#">
+<div class="flex items-center justify-center bg-purple-500 rounded-full size-12 text-white font-bold text-xl" data-alt="Initials for Faith Wanjiru">FW</div>
+<div class="flex flex-col">
+<p class="text-white font-semibold">Faith Wanjiru</p>
+<p class="text-sm text-gray-400">Next: Oct 17 at 3:00 PM</p>
+</div>
+</a>
+<!-- Empty State Example -->
+<!--
+                             <div class="text-center py-10 px-4">
+                                <span class="material-symbols-outlined text-5xl text-gray-600 mb-2">sentiment_dissatisfied</span>
+                                <p class="text-gray-400">You have not been assigned any clients yet.</p>
+                             </div>
+                             -->
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

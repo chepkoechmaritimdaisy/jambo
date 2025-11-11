@@ -1,0 +1,1 @@
+This change establishes the foundation for the admin panel. It includes creating a secure admin layout and implementing the full CRUD (Create, Read, Update, Delete) interface for managing service packages. This is a critical step for allowing site administrators to manage the services offered.

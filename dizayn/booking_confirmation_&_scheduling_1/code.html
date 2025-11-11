@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking Confirmation - InklessIsMore.ke</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13a4ec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        font-family: 'Manrope', 'Noto Sans', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111618] dark:text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col group/design-root">
+<!-- TopNavBar Component -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-800 px-6 md:px-10 py-3 bg-white dark:bg-background-dark/50 backdrop-blur-sm sticky top-0 z-10">
+<div class="flex items-center gap-4 text-[#111618] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs><clippath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clippath></defs>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">InklessIsMore.ke</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<nav class="flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Home</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Services</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Pricing</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Ambassador Program</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Contact</a>
+</nav>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">My Dashboard</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_iK2REM3_zvBZ6Z-m6iqLBAPpFtVfd1kJcaWvrOk8iMHrTq-TAdrDjKsK6aTFPzFmWR49q_JNhbI2ggxrwQvK6F2lkJEDEC_axGa27k4Yjc9zdswgJzEVRPeNdhMoZibpR2Q_zEHyc8jxH6N12yT_JvGp-vDRllGTMuJd9HcgmOCGzWvd4b72xISxKKbjRMfF0j7HsjvJF9q9eFiEre3QhsoU9bqU5Pxa8pFgUv8XqNvuZ8fXZR8aL1qrLHPVWjtz3cxl3CWFf9s");'></div>
+</div>
+<button class="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex flex-1 justify-center py-10 px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col max-w-4xl w-full">
+<!-- PageHeading Component -->
+<div class="flex flex-col items-center text-center gap-3 p-4">
+<div class="flex items-center justify-center size-16 bg-green-500/10 dark:bg-green-500/20 rounded-full mb-2">
+<span class="material-symbols-outlined text-3xl text-green-600 dark:text-green-400">check_circle</span>
+</div>
+<h1 class="text-4xl font-black leading-tight tracking-[-0.033em] text-[#111618] dark:text-white">Payment Successful!</h1>
+<p class="text-base font-normal leading-normal text-[#617c89] dark:text-gray-400">Your package is confirmed. Please select a date and time for your first session.</p>
+</div>
+<!-- Card Component -->
+<div class="p-4 my-6">
+<div class="flex flex-col sm:flex-row items-stretch justify-between gap-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark/50 p-6">
+<div class="flex flex-col gap-1 flex-[2_2_0px]">
+<p class="text-sm font-normal leading-normal text-[#617c89] dark:text-gray-400">ORDER SUMMARY</p>
+<p class="text-lg font-bold leading-tight text-[#111618] dark:text-white">5 Session Laser Removal Package</p>
+<p class="text-sm font-normal leading-normal text-[#617c89] dark:text-gray-400">Amount Paid: KES 50,000</p>
+</div>
+<div class="w-full sm:w-auto bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1 min-h-[120px]" data-alt="Stylized image of a laser treatment device" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcxOP7G__gqNLUjLMH8zg0gOxnpMIqohnB_8hu17la1DO6ESzL1uDmU92MoCh0z-S2yl7kc4wTx-LLB5U05g60mrcF5y46IbotVIzXboCJsofFvJKe_qumsjDDkZ8ehacdZMou38WWQnDD80dMpa77n1M37xb0jD6I3-6uwe5eJ5TzWb-eRvOLqzUP9birP4XBkYHqU8fVTUaEM4xGI1ALiWtMATqIhGu6sxWHBIIqGtPd2k6EfJCuWdIyJofTqpsOmeJiUj0h5ZY");'></div>
+</div>
+</div>
+<!-- SectionHeader Component -->
+<h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-center text-[#111618] dark:text-white">Book Your First Session</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-4">
+<!-- CalendarPicker Component -->
+<div class="flex flex-col items-center gap-4">
+<p class="text-sm font-semibold text-gray-500 dark:text-gray-400">Step 1: Choose a Date</p>
+<div class="flex w-full max-w-sm flex-col gap-0.5 p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark/50">
+<div class="flex items-center p-1 justify-between">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-xl">chevron_left</span>
+</button>
+<p class="text-base font-bold leading-tight flex-1 text-center text-[#111618] dark:text-white">October 2024</p>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7">
+<p class="text-sm font-bold flex h-12 w-full items-center justify-center pb-0.5 text-[#617c89] dark:text-gray-400">S</p>
+<p class="text-sm font-bold flex h-12 w-full items-center justify-center pb-0.5 text-[#617c89] dark:text-gray-400">M</p>
+<p class="text-sm font-bold flex h-12 w-full items-center justify-center pb-0.5 text-[#617c89] dark:text-gray-400">T</p>
+<p class="text-sm font-bold flex h-12 w-full items-center justify-center pb-0.5 text-[#617c89] dark:text-gray-400">W</p>
+<p class="text-sm font-bold flex h-12 w-full items-center justify-center pb-0.5 text-[#617c89] dark:text-gray-400">T</p>
+<p class="text-sm font-bold flex h-12 w-full items-center justify-center pb-0.5 text-[#617c89] dark:text-gray-400">F</p>
+<p class="text-sm font-bold flex h-12 w-full items-center justify-center pb-0.5 text-[#617c89] dark:text-gray-400">S</p>
+<button class="h-12 w-full text-gray-400 dark:text-gray-600 col-start-3 text-sm font-medium" disabled=""><div class="flex size-full items-center justify-center rounded-full">1</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">2</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">3</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">4</div></button>
+<button class="h-12 w-full text-gray-400 dark:text-gray-600 text-sm font-medium" disabled=""><div class="flex size-full items-center justify-center rounded-full">5</div></button>
+<button class="h-12 w-full text-gray-400 dark:text-gray-600 text-sm font-medium" disabled=""><div class="flex size-full items-center justify-center rounded-full">6</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">7</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">8</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">9</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">10</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">11</div></button>
+<button class="h-12 w-full text-gray-400 dark:text-gray-600 text-sm font-medium" disabled=""><div class="flex size-full items-center justify-center rounded-full">12</div></button>
+<button class="h-12 w-full text-gray-400 dark:text-gray-600 text-sm font-medium" disabled=""><div class="flex size-full items-center justify-center rounded-full">13</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">14</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">15</div></button>
+<button class="h-12 w-full text-white text-sm font-medium"><div class="flex size-full items-center justify-center rounded-full bg-primary ring-2 ring-primary/50">16</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">17</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">18</div></button>
+<button class="h-12 w-full text-gray-400 dark:text-gray-600 text-sm font-medium" disabled=""><div class="flex size-full items-center justify-center rounded-full">19</div></button>
+<button class="h-12 w-full text-gray-400 dark:text-gray-600 text-sm font-medium" disabled=""><div class="flex size-full items-center justify-center rounded-full">20</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">21</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">22</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">23</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">24</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">25</div></button>
+<button class="h-12 w-full text-gray-400 dark:text-gray-600 text-sm font-medium" disabled=""><div class="flex size-full items-center justify-center rounded-full">26</div></button>
+<button class="h-12 w-full text-gray-400 dark:text-gray-600 text-sm font-medium" disabled=""><div class="flex size-full items-center justify-center rounded-full">27</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">28</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">29</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">30</div></button>
+<button class="h-12 w-full text-[#111618] dark:text-gray-300 text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors rounded-full"><div class="flex size-full items-center justify-center rounded-full">31</div></button>
+</div>
+</div>
+</div>
+<!-- Time Slot Picker Component -->
+<div class="flex flex-col items-center gap-4">
+<p class="text-sm font-semibold text-gray-500 dark:text-gray-400">Step 2: Select a Time</p>
+<div class="w-full max-w-sm p-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark/50">
+<p class="text-center font-bold text-base mb-4 text-[#111618] dark:text-white">Wednesday, October 16th</p>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+<button class="text-sm font-semibold py-3 px-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:border-primary hover:text-primary dark:hover:text-primary transition-colors">10:00 AM</button>
+<button class="text-sm font-semibold py-3 px-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:border-primary hover:text-primary dark:hover:text-primary transition-colors">10:30 AM</button>
+<button class="text-sm font-semibold py-3 px-2 rounded-lg text-gray-400 dark:text-gray-600 border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 cursor-not-allowed" disabled="">11:00 AM</button>
+<button class="text-sm font-semibold py-3 px-2 rounded-lg border border-primary text-white bg-primary ring-2 ring-primary/50 transition-colors">11:30 AM</button>
+<button class="text-sm font-semibold py-3 px-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:border-primary hover:text-primary dark:hover:text-primary transition-colors">01:00 PM</button>
+<button class="text-sm font-semibold py-3 px-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:border-primary hover:text-primary dark:hover:text-primary transition-colors">01:30 PM</button>
+<button class="text-sm font-semibold py-3 px-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:border-primary hover:text-primary dark:hover:text-primary transition-colors">02:00 PM</button>
+<button class="text-sm font-semibold py-3 px-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:border-primary hover:text-primary dark:hover:text-primary transition-colors">02:30 PM</button>
+<button class="text-sm font-semibold py-3 px-2 rounded-lg text-gray-400 dark:text-gray-600 border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 cursor-not-allowed" disabled="">03:00 PM</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Booking Summary and CTA -->
+<div class="flex flex-col items-center gap-6 mt-6 p-4">
+<div class="text-center p-4 rounded-lg bg-primary/10 dark:bg-primary/20 w-full max-w-md">
+<p class="font-bold text-primary dark:text-primary-300">Your appointment is set for:</p>
+<p class="text-lg font-bold text-[#111618] dark:text-white mt-1">Wednesday, October 16th at 11:30 AM</p>
+</div>
+<div class="flex flex-col items-center gap-4 w-full max-w-sm">
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Confirm Booking</span>
+</button>
+<a class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">Book Later (Go to Dashboard)</a>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full mt-auto py-6 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-gray-800">
+<div class="max-w-4xl mx-auto text-center text-sm text-gray-500 dark:text-gray-400">
+<p>© 2024 InklessIsMore.ke. All Rights Reserved.</p>
+<div class="flex justify-center gap-4 mt-2">
+<a class="hover:text-primary transition-colors" href="#">FAQs</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">Customer Support</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

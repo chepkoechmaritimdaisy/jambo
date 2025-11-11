@@ -1,0 +1,104 @@
+
+
+### **Proje Geliştirme Planı: InklessIsMore.ke (Jambo-CLIENT Faz 1)**
+
+**1. Proje Özeti ve Amaç**
+
+* **Proje Adı:** `inklessismore.ke`
+* **Amaç:** Kenya merkezli bir dövme silme kliniği için **modern, akıcı ve yüksek performanslı** bir web sitesi geliştirmek.
+* **Platform:** Next.js (App Router kullanılması tercih edilir).
+* **Temel Fonksiyonlar (Faz 1):**
+    1.  Paket satışı için tam bir e-ticaret akışı.
+    2.  Satın alma sonrası, müsaitlik durumuna (personel/istasyon) dayalı gelişmiş bir rezervasyon sistemi.
+    3.  Tüm sitenin (paketler, müsaitlik, rezervasyonlar) yönetileceği modern bir admin paneli.
+    4.  Komisyon ve kupon kodlarına dayalı bir Ambassador (Affiliate) programı.
+
+**2. Kritik UX/UI Prensibi: Modern ve Akıcı Arayüz**
+
+Bu proje için "standart" bir tema kullanılamaz. Tüm akışlar (e-ticaret, takvim, admin paneli) son derece **modern, sürtünmesiz (frictionless) ve akıcı** olmalıdır. Arayüzler hızlı yanıt vermeli, animasyonlar pürüzsüz olmalı ve kullanıcı deneyimi bir SaaS uygulaması kalitesinde olmalıdır.
+
+**3. Teknoloji Stack (Öneri)**
+
+* **Framework:** Next.js (App Router)
+* **Styling:** Tailwind CSS (Modern ve akıcı arayüzler için ideal)
+* **Veritabanı (Faz 1):** Vercel Postgres veya Supabase (Next.js ile hızlı entegrasyon için)
+* **Kimlik Doğrulama:** NextAuth.js (Admin ve müşteri hesapları için)
+* **Ödeme:** Stripe
+* **Takvim Kütüphanesi:** `react-day-picker` (şiddetle tavsiye edilir) veya `react-calendar`
+* **Tarih Yönetimi:** `date-fns`
+
+**4. Faz 1 Mimarisi: Bağımsız Next.js Uygulaması**
+
+Faz 2'de Jambo-SAAS (Elixir) devreye girene kadar, bu Next.js uygulaması **kendi kendine yeterli (self-contained)** olmalıdır. Tüm backend mantığı (API, veritabanı işlemleri) Next.js App Router içindeki **Route Handlers** (API rotaları) kullanılarak yazılacaktır.
+
+---
+
+### **Geliştirme Görev Listesi (Adım Adım)**
+
+#### Adım 0: Kurulum ve Temel Yapılandırma
+1.  Next.js projesini başlat (`create-next-app`).
+2.  Tailwind CSS kurulumunu yap.
+3.  Vercel Postgres veya Supabase veritabanını bağla.
+4.  NextAuth.js kurulumunu yap (Google/Email provider ve Admin rolü için `callbacks` ayarla).
+5.  Temel `layout.tsx` dosyasını, Navbar ve Footer bileşenlerini oluştur.
+
+#### Adım 1: Statik Sayfalar ve İçerik
+* **Anasayfa:** Güven veren, profesyonel tasarım.
+* **Q&A (SSS):** Soru-cevap sayfası.
+* **Galeri (Before/After):** Öncesi/sonrası fotoğraflarını sergileyen sayfa.
+
+#### Adım 2: Admin Paneli (Çekirdek)
+1.  `/admin` rotasını oluştur ve NextAuth ile sadece "admin" rolüne sahip kullanıcıların erişimine aç.
+2.  Modern bir admin paneli layout'u tasarla (Sidebar, Header).
+3.  **Paket Yönetimi (CRUD):**
+    * Veritabanı Şeması: `Packages` (id, name, description, price, photos).
+    * Admin UI: Paket ekleme, silme, düzenleme (fotoğraf yükleme dahil) için modern bir form ve liste arayüzü.
+
+#### Adım 3: E-Ticaret Akışı (Kullanıcı Tarafı)
+1.  **/packages** (Paket Listesi): Admin panelinden girilen paketleri listeleyen sayfa.
+2.  **/packages/[slug]** (Paket Detayı): Paketin detaylarını (foto, açıklama) gösteren sayfa.
+3.  **Satın Alma Akışı:**
+    * Stripe entegrasyonunu yap.
+    * "Satın Al" butonu ile kullanıcıyı Stripe Checkout'a yönlendir.
+    * **Webhook Oluştur:** Stripe'tan gelen `checkout.session.completed` event'ini dinleyen bir API rotası (`/api/webhooks/stripe`) oluştur.
+    * Ödeme başarılı olduğunda: Kullanıcıyı `auth.users` tablosuna (eğer yoksa) ve `orders` tablosuna kaydet. Kullanıcıya rezervasyon hakkı tanı.
+
+#### Adım 4: Rezervasyon Sistemi (En Kritik Bölüm)
+Bu, projenin kalbidir ve "modern/akıcı" prensibine en çok uyulması gereken yerdir.
+
+1.  **Veritabanı Şemaları:**
+    * `Specialists` (Uzmanlar)
+    * `Stations` (İstasyonlar/Odalar)
+    * `Availability` (Müsaitlik): (specialist_id, station_id, date, start_time, end_time)
+    * `Bookings` (Rezervasyonlar): (user_id, package_id, date, time, specialist_id)
+2.  **Admin UI - Müsaitlik Yönetimi:**
+    * Admin panelinde **/admin/availability** sayfası oluştur.
+    * Adminin uzmanları ve istasyonları yönetebileceği bir arayüz (CRUD).
+    * **Modern Takvim Arayüzü:** Adminin bir takvim üzerinden gün seçip, o gün için uzmanların/istasyonların çalışma saatlerini (örn: 09:00-12:00, 14:00-17:00) `Availability` tablosuna kaydedebileceği **akıcı** bir arayüz.
+3.  **Kullanıcı UI - Rezervasyon Akışı:**
+    * Kullanıcının (ödeme yapmış) "Hesabım" veya e-mail linki üzerinden erişebileceği **/book** sayfası.
+    * **`react-day-picker` Entegrasyonu:**
+        * API'dan (`/api/availability/slots`) müsait olan günleri çek.
+        * Sadece müsait günü olan tarihlerin takvimde seçilebilir olmasını sağla.
+    * **Saat Seçimi:** Kullanıcı bir gün seçtiğinde, o gün için müsait olan **saat slotlarını** (örn: 09:00, 09:30, 10:00) listele. (Bu slotlar `Availability` ve `Bookings` tabloları karşılaştırılarak hesaplanmalı).
+    * Kullanıcı saat seçtiğinde rezervasyonu `Bookings` tablosuna kaydet.
+
+#### Adım 5: Ambassador (Affiliate) Programı (Faz 1)
+1.  **Veritabanı Şemaları:**
+    * `Ambassadors` (user_id, unique_code, commission_rate, client_discount_rate)
+2.  **Statik Sayfa:** Ambassador programını açıklayan **/ambassador-program** sayfası.
+3.  **Admin UI - Ambassador Yönetimi:**
+    * Ambassador başvurularını onaylama/yönetme arayüzü.
+    * Her ambassador için **unique kod** atama.
+    * Her ambassador için komisyon ve müşteri indirim oranlarını belirleme (örn: kendi %10, müşteri %10).
+4.  **E-Ticaret Entegrasyonu:**
+    * Stripe Checkout (veya sepet) sayfasına "İndirim Kodu" alanı ekle.
+    * Bu kodu doğrulayan bir API rotası (`/api/coupons/validate`) oluştur.
+    * Kod geçerliyse: Fiyatı güncelle, indirimi uygula ve `Bookings` veya `Orders` tablosuna hangi ambassador kodunun kullanıldığını kaydet.
+5.  **Tasarım (Yazdırılabilir Kupon):**
+    * Ambassador'ın kendi panelinde görebileceği, basit bir HTML/CSS sayfası (`/ambassador/my-code/print`) tasarla. Bu sayfa, ambasadorun kendi kodunu içeren, A4'e veya el ilanı olarak basılabilecek profesyonel bir kupon tasarımı olmalı.
+
+#### Adım 6: Geleceğe Hazırlık (Jambo-SAAS)
+* Tüm iş mantığını (rezervasyon, affiliate) **UI bileşenlerinden ayrı** tut.
+* Tüm veritabanı işlemlerini, net bir şekilde tanımlanmış API rotaları (Route Handlers) arkasında topla.
+* Bu sayede, Faz 2'de Elixir API'leri hazır olduğunda, sadece bu API rotalarının *içini* Elixir'e istek atacak şekilde değiştirmek yeterli olacaktır.
