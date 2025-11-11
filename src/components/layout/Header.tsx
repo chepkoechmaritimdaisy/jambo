@@ -1,9 +1,19 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
+  const pathname = usePathname();
+
+  // On the packages page, we will use a different header, so we render nothing here.
+  if (pathname === '/packages') {
+    return null;
+  }
+
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200/80 bg-background-light/80 px-4 py-3 backdrop-blur-sm sm:px-8 md:px-10">
-      <div className="flex items-center gap-3 text-text-primary">
+    <header className="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200/80 dark:border-gray-700/80 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm px-4 py-3 sm:px-8 md:px-10">
+      <div className="flex items-center gap-3 text-text-primary dark:text-white">
         <div className="size-6 text-primary">
           <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_6_319)">
