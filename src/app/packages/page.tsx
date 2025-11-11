@@ -11,6 +11,7 @@ export default function PackagesPage() {
       description: "For very small tattoos like single letters or symbols.",
       features: ["For single letters or symbols", "1 Session", "Includes aftercare advice"],
       ctaText: "Buy Now",
+      slug: 'micro-package',
     },
     {
       name: "Small Area Package",
@@ -20,6 +21,7 @@ export default function PackagesPage() {
       features: ["Up to business card size", "3 Sessions", "Includes aftercare advice"],
       isPopular: true,
       ctaText: "Buy Now",
+      slug: 'small-area-package',
     },
     {
       name: "Medium Area Package",
@@ -28,6 +30,7 @@ export default function PackagesPage() {
       description: "Best for forearm, bicep, or calf pieces.",
       features: ["Forearm or bicep pieces", "6 Sessions", "Best value savings"],
       ctaText: "Buy Now",
+      slug: 'medium-area-package',
     },
     {
       name: "Large Area / Custom",

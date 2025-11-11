@@ -20,6 +20,19 @@ const config: Config = {
         "text-muted-dark": "#A0A0A0",
         "border-dark": "#3b4b54",
         "success": "#0bda57",
+
+        // From Screen 8 & 10
+        "primary-navy": "#003366",
+        "secondary-grey": "#F0F2F5",
+        "accent-coral": "#FF7F50",
+        "text-dark-blue": "#333333",
+        "text-light-blue": "#617c89",
+
+        // Dark mode from screen 10
+        "dm-primary": "#0A192F",
+        "dm-secondary": "#172A45",
+        "dm-text-primary": "#E6F1FF",
+        "dm-text-secondary": "#A8B2D1",
       },
       fontFamily: {
         "display": ["Manrope", "sans-serif"],

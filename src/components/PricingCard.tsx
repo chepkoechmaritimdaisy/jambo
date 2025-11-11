@@ -1,5 +1,6 @@
 // src/components/PricingCard.tsx
 import React from 'react';
+import Link from 'next/link';
 
 interface PricingCardProps {
   name: string;
@@ -10,6 +11,7 @@ interface PricingCardProps {
   isPopular?: boolean;
   ctaText: string;
   isCustom?: boolean;
+  slug?: string;
 }
 
 const PricingCard: React.FC<PricingCardProps> = ({
@@ -20,7 +22,8 @@ const PricingCard: React.FC<PricingCardProps> = ({
   features,
   isPopular,
   ctaText,
-  isCustom
+  isCustom,
+  slug,
 }) => {
   const popularBadge = isPopular ? (
     <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
@@ -30,6 +33,13 @@ const PricingCard: React.FC<PricingCardProps> = ({
 
   const cardClasses = `flex flex-1 flex-col gap-6 rounded-xl border p-6 transition-shadow hover:shadow-lg dark:hover:shadow-primary/10
     ${isPopular ? 'border-2 border-solid border-primary bg-white dark:bg-card-dark' : 'border-solid border-gray-200 dark:border-gray-800 bg-white dark:bg-card-dark'}`;
+
+  const CtaButton = () => (
+    <button className={`flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 text-sm font-bold leading-normal tracking-[0.015em] transition-colors
+      ${isCustom ? 'bg-gray-100 dark:bg-gray-800 text-[#111618] dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700' : 'bg-primary text-white hover:bg-primary/90'}`}>
+      <span className="truncate">{ctaText}</span>
+    </button>
+  );
 
   return (
     <div className={cardClasses}>
@@ -51,10 +61,13 @@ const PricingCard: React.FC<PricingCardProps> = ({
         ))}
       </div>
       <div className="mt-auto flex flex-col gap-2 pt-4">
-        <button className={`flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 text-sm font-bold leading-normal tracking-[0.015em] transition-colors
-          ${isCustom ? 'bg-gray-100 dark:bg-gray-800 text-[#111618] dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700' : 'bg-primary text-white hover:bg-primary/90'}`}>
-          <span className="truncate">{ctaText}</span>
-        </button>
+        {slug ? (
+          <Link href={`/packages/${slug}`}>
+            <CtaButton />
+          </Link>
+        ) : (
+          <CtaButton />
+        )}
       </div>
     </div>
   );
